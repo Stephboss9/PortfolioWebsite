@@ -128,10 +128,12 @@ h3 { font-size: var(--fs-h3); }
 .section__subtitle--intro,
 .section__subtitle--about {
     background: var(--clr-accent);
-    padding: .25 em 1 em;
+    padding: .25em 1em;
     font-family: var(--ff-secondary);
     margin-bottom: 1em;
 }
+
+
 
 /*header*/
 nav { display: none; }
@@ -244,3 +246,51 @@ nav { display: none; }
     }
 }
 
+.about-me {
+    margin: 0 auto;
+}
+
+.umd-img {
+    box-shadow: var(--bs);
+}
+
+/*Who I am section*/
+@media (min-width: 600px)
+{
+    .about-me {
+        display: grid;
+        grid-template-areas:
+        "title img"
+        "subtitle img"
+        "text img"
+        ;
+        grid-template-columns:1fr 300px;
+        grid-column-gap: 2em;
+    }
+    
+    .section__title--About-me {
+        grid-area: title;
+    }
+
+    .umd-img {
+        grid-area: img;
+        position: relative;
+
+    }
+
+    .section__subtitle--about {
+        align-self: start;
+        grid-column: 1/-1;
+        grid-row: 2;
+        position: relative;
+        left: -1em;
+        width: calc(100% + 2em);
+        padding-left: 1em;
+        padding-right: calc(200px + 4em);
+
+    }
+
+    .about-me__body {
+        grid-row: 3;
+    }
+}
