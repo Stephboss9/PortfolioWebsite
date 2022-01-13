@@ -177,7 +177,7 @@ nav { display: none; }
     }
 
     .intro_img {
-        grid-area: img; /*displays an image based on its appropriate*/
+        grid-area: img; /*displays an image at a position corresponmding to grid-template-areas setting*/
         min-width: 250px;
         position: relative;
         z-index: 2;
