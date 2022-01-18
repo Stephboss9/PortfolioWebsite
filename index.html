@@ -43,7 +43,8 @@
 
 
         <!-- My Interests -->
-        <section class = "my_interests" id = "interests">
+        <div class = "reveal">
+               <section class = "my_interests" id = "interests">
             <h2 class = "section__title section__title--services">My Interests</h2>
             <div class = "Interests">
 
@@ -72,9 +73,13 @@
             </div> <!--end of interests-->
             <a href = "#projects" class = "btn"> My Work</a>
         </section>
+        </div>
+     
+        
 
         <!--About me -->
-        <section class = "about-me" id=" About-me">
+        <div class = "reveal">
+         <section class = "about-me" id=" About-me">
             <div></div>
             <h2 class = "section__title section__title--About-me"> Who am I?</h2>
             <p class = "section__subtitle section__subtitle--about"> Aspiring full-stack Software Engineer </p> 
@@ -94,32 +99,35 @@
 
             <img  class = "umd-img"src = Images/Smiley_steph.jpg alt = "steph wearing black sweater"> 
         </section>
+        </div>
 
         <!--My projects-->
-        <section class = "my-projects" id = "projects">
-            <h2 class = "section__title projects_title"> My Work</h2>
-            <p class = "section__subtitle projects_subtitle">  some of my work</p>
-
-            <div class = "portfolio">
-                <a href = "#" class = "porfolio__item">
-                    <img src = "Images/personal_site.PNG"  class = "portfolio__img"  alt = "my personal website__img">
-                </a>
-         
-
-          
-                <a href = "#" class = "porfolio__item">
-                    <img src = "Images/collab_page.PNG" class = "portfolio__img" alt = "my personal website__img">
-                </a>
+        <div class = "reveal"> 
+            <section class = "my-projects" class = "reveal" id = "projects">
+                <h2 class = "section__title projects_title"> My Work</h2>
+                <p class = "section__subtitle projects_subtitle">  some of my work</p>
+    
+                <div class = "portfolio">
+                    <a href = "#" class = "porfolio__item">
+                        <img src = "Images/personal_site.PNG"  class = "portfolio__img"  alt = "my personal website__img">
+                    </a>
+             
+    
+              
+                    <a href = "#" class = "porfolio__item">
+                        <img src = "Images/collab_page.PNG" class = "portfolio__img" alt = "my personal website__img">
+                    </a>
+                </div>
+            </section>
+        </div>
       
-               
-            </div>
-        </section>
   
 
     <!--footer--> 
+    
     <footer>
         <a href = "email to: stephfort28@gmail.com" class = "footer-link"> stephfort28@gmail.com </a>
-        <ul class = "social-list">
+        <ul class = "social-list" >
             <li class = "social-list__item">
                 <a href = "https://github.com/Stephboss9"a> <i class = "fa fa-github"></i> </a>
             </li>
@@ -134,6 +142,29 @@
         </ul>
     </footer>
 
-    </body>
 
+     <script> 
+
+        window.addEventListener('scroll', reveal);
+
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+    
+
+            for(var i = 0; i < reveals.length; i++){
+
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 150;
+
+                if(revealtop < windowheight - revealpoint) {
+                    reveals[i].classList.add('active');
+                }
+                else {
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+     </script>
+    </body>
 </html>

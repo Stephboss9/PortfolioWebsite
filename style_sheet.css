@@ -377,3 +377,18 @@ footer {
 .footer-link:hover{
     opacity: .75;
 }
+
+
+/*reveal on scroll effect*/
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    transition: all 3s ease;
+    opacity: 0;
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity:1;
+}
