@@ -24,8 +24,8 @@
             <nav class = "nav">
                 <ul class = "nav__list">
                     <li class = "nav__item"><a href="#home" class = "nav__link">Home</a></li>
-                    <li class = "nav__item"><a href="#About-me" class = "nav__link">About me</a></li>
-                    <li class = "nav__item"><a href="#" class = "nav__link">My Projects</a></li>
+                    <li class = "nav__item"><a href="#Me" class = "nav__link">About Me</a></li>
+                    <li class = "nav__item"><a href="#projects" class = "nav__link">My Projects</a></li>
                     <li class = "nav__item"><a href="#" class = "nav__link">Education</a></li>
                 </ul>    
             </nav>
@@ -76,10 +76,9 @@
         
 
         <!--About me -->
-        <div class = "reveal">
-         <section class = "about-me" id=" About-me">
-            <div></div>
-            <h2 class = "section__title section__title--About-me"> Who am I?</h2>
+        <div class = "reveal" id= "Me">
+         <section class = "about-me" >
+            <h2 class = "section__title setion__title--About-me"> Who am I?</h2>
             <p class = "section__subtitle section__subtitle--about"> Aspiring full-stack Software Engineer </p> 
 
             <div class = "about-me__body">
@@ -122,7 +121,7 @@
   
 
     <!--footer--> 
-    <div class = "reveal">
+   
         <footer>
             <a href = "email to: stephfort28@gmail.com" class = "footer-link"> stephfort28@gmail.com </a>
             <ul class = "social-list" >
@@ -139,32 +138,11 @@
                 </li>
             </ul>
         </footer>
-    </div>
+    
     
 
+    <script src = "index.js"></script>
+     <script src = "index_2.js"> </script>
 
-     <script> 
-
-        window.addEventListener('scroll', reveal);
-
-        function reveal() {
-            var reveals = document.querySelectorAll('.reveal');
-    
-
-            for(var i = 0; i < reveals.length; i++){
-
-                var windowheight = window.innerHeight;
-                var revealtop = reveals[i].getBoundingClientRect().top;
-                var revealpoint = 150;
-
-                if(revealtop < windowheight - revealpoint) {
-                    reveals[i].classList.add('active');
-                }
-                else {
-                    reveals[i].classList.remove('active');
-                }
-            }
-        }
-     </script>
     </body>
 </html>
