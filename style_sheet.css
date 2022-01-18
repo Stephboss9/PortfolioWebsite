@@ -178,8 +178,9 @@ nav { display: none; }
 
     .intro_img {
         grid-area: img; /*displays an image at a position corresponmding to grid-template-areas setting*/
-        min-width: 250px;
+        min-width: 250px; /*minimum width allowed for the image*/
         position: relative;
+        border-radius: 0;
         z-index: 2;
     }
 
@@ -187,11 +188,11 @@ nav { display: none; }
         align-self: start; /*causes it to not stretch down*/ 
         grid-column: -1 / 1; /*causes subtitle intro
                               to overlap with image*/
-        grid-row: 2;
+        grid-row: 2;          /*specefies which row on the grid to place content*/
         text-align: right; /*causes text to be aligned on the right side*/
         position: relative;
         left: -1.5em;
-        width: 100%
+        width: 100%       
 
     }
 
@@ -211,6 +212,7 @@ nav { display: none; }
     position: relative;
 }
 
+/*creates a rectangle box*/
 .section__title--services::after {
     content: '';
     display:block; /*displays an element as a block element, starts at a new line*/
@@ -293,4 +295,85 @@ nav { display: none; }
     .about-me__body {
         grid-row: 3;
     }
+}
+
+/*my projects section*/
+
+ .my-projects {
+     background: var(--clr-dark);
+     grid-template-columns: repeat(3) 
+ }
+
+ .projects_title, 
+.projects_subtitle {
+    text-align: center;
+}
+
+ .projects_title {
+     color: var(--clr-custom);
+     
+ }
+
+ .projects_subtitle {
+     color: var(--clr-accent);
+     margin-bottom: 20px;
+ }
+
+ .portfolio {
+     display: grid;
+     grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); /*automatically makes three columns*/
+ }
+
+ .portfolio__item {
+     background: var(--clr-accent);
+    overflow: hidden;
+ }
+
+ .portfolio__img {
+    background: var(--clr-accent);
+    transition: transform 750ms cubic-bezier(.5, 0, .5, 1),
+    opacity 250ms linear;
+ }
+
+ .portfolio__img:hover {
+     overflow: hidden;
+    transform: scale(1.1);
+    opacity: .95;
+ }
+ 
+ 
+/*footer styling*/
+
+footer {
+    background: rgb(17, 17, 17) ;
+    padding: 20px 20px;
+    text-align: center;
+    font-size: var(--fs-h3);
+
+}
+
+.footer-link {
+    color: var(--clr-accent);
+    text-decoration: none;
+}
+
+.social-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.social-list__item {
+    margin: 0 1em;
+}
+
+.social-list__item a{
+    color: var(--clr-accent) 
+}
+
+.social-list__item:hover, 
+.footer-link:hover{
+    opacity: .75;
 }
