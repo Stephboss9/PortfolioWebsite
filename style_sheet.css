@@ -494,15 +494,17 @@ footer {
 
 .social-list__item {
     margin: 0 1em;
+    transition: transform 650ms cubic-bezier(.5, 0, .5, 1);
 }
 
 .social-list__item a{
-    color: var(--clr-accent) 
+    color: var(--clr-accent);
 }
 
 .social-list__item:hover, 
 .footer-link:hover{
     opacity: .75;
+    transform: scale(1.2);
 }
 
 
