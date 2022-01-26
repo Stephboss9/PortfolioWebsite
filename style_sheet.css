@@ -428,7 +428,6 @@ header{
 
  .my-projects {
      background: var(--clr-dark);
-     grid-template-columns: repeat(3) 
  }
 
  .projects_title, 
@@ -455,6 +454,8 @@ header{
      background: var(--clr-accent);
     overflow: hidden;
  }
+
+
 
  .portfolio__img {
     background: var(--clr-accent);
